@@ -1,0 +1,140 @@
+/* style.css - Improved UI with centered search, clean modern layout, better visuals */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #1c92d2, #f2fcfe);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background 0.5s ease-in-out;
+}
+
+.app {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 95%;
+  max-width: 600px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 70%;
+  max-width: 300px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background-color: #00c6ff;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #0099cc;
+}
+
+.weather-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.weather-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-main img {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-details {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.forecast-box {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 130px;
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.forecast-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.error-box {
+  background: rgba(255, 0, 0, 0.15);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #ffdddd;
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+  }
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+  .forecast-box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
