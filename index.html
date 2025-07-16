@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button id="searchBtn">Search</button>
+    </div>
+    <div id="weather" class="weather-box hidden">
+      <h2 id="city"></h2>
+      <p id="date"></p>
+      <div class="weather-main">
+        <img id="icon" src="" alt="weather icon" />
+        <h1 id="temperature"></h1>
+        <p id="description"></p>
+      </div>
+      <div class="weather-details">
+        <p>Humidity: <span id="humidity"></span>%</p>
+        <p>Wind Speed: <span id="wind"></span> km/h</p>
+      </div>
+    </div>
+    <div id="error" class="error-box hidden">
+      <p>City not found. Please try again.</p>
+    </div>
+  </div>
+  <div id="forecast" class="hidden forecast-box"></div>
+</body>
+</html>
